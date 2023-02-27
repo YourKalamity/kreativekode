@@ -162,6 +162,22 @@ width: 6rem;
     font-size: 50px;
 }
 
+.bodySection h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.bodySection p {
+  text-align: justify;
+  font-size: 20px;
+}
+
+/* About Us */
+
+#aboutUs {
+    background-color: #291749;
+}
+
 /* Testimonials */
 
 #testimonials {
