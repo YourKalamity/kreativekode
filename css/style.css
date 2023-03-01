@@ -20,6 +20,7 @@ body {
     overflow: hidden;
     background-color: #280051;
     position: relative;
+    z-index: 5;
 }
 .navbar a {
     float: left;
@@ -75,6 +76,8 @@ body {
 }
 
 /* Header */
+
+/* Big Header */
 .mainHeaderWal{
     background-image: url(../img/headerWal.jpg);
     background-size: cover;
@@ -128,9 +131,92 @@ body {
     padding: 0;
 }
 
+/* Small Header */
+.subHeaderWal{
+  background-image: url(../img/subheaderWal1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Small Header */
+.subHeaderWal2{
+  background-image: url(../img/subheaderWal2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitleGlassPane {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+
+  position: absolute;
+  filter:blur(0px);
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 2vw;
+  text-align: center;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .subtitleGlassPane {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.subtitleGlassPane h1 {
+  font-size: 5vw;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.subtitleGlassPane h2 {
+  font-size: 3vw;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  /* On smaller screens, make glass pane take up more space */
+  .subHeaderWal{
+    height:20vh;
+  }
+  .subtitleGlassPane {
+    width: 70%;
+    top:20%;
+  }
+  .subtitleGlassPane h1 {
+    font-size: 7.5vw;
+  }
+}
+
 /* Main Body */
 
-.bodySection::before {
+.initSection::before {
 animation: bounce 1s ease infinite;
 bottom: 2rem;
 color: #fff;
@@ -176,6 +262,14 @@ width: 6rem;
 
 #aboutUs {
     background-color: #291749;
+}
+
+.aboutUs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2.5vw;
+  margin: 0.2vw;
 }
 
 /* Testimonials */
@@ -258,6 +352,218 @@ width: 6rem;
     cursor: pointer;
   }
   
+
+/* Programming Languages list */
+
+#languages {
+  background-color: #0a0612; /* Set background color */
+}
+
+.languages {
+  display: flex; /* Use flexbox to arrange testimonials */
+  flex-wrap: wrap; /* Wrap testimonials to next line */
+  justify-content: space-between; /* Add space between testimonials */
+}
+
+.language {
+  flex-basis: calc(33.33% - 20px); /* Set width for each testimonial */
+  margin: 0.2vw; /* Add margin between testimonials */
+  background-color: #1f1137; /* Set background color */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); /* Add shadow */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.languageIcon {
+  display: flex; /* Use flexbox to center image */
+  justify-content: center;
+  margin: 20px;
+}
+
+.languageIcon img {
+  max-width: 100%; /* Make image responsive */
+  height: 10vw;
+}
+
+.languageText {
+  text-align: center; /* Center text */
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.languageText h2 {
+  font-size: 24px; /* Set font size */
+  margin-bottom: 10px;
+}
+
+.languageText p {
+  font-size: 18px; /* Set font size */
+  line-height: 1.5; /* Add line-height */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* On smaller screens, display one testimonial per line */
+  .language {
+    flex-basis: 100%; /* Set width to 100% */
+    margin: 20px 0; /* Add margin between testimonials */
+  }
+}
+
+/* Projects */
+
+/* Style the container for the projects */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Style the individual project */
+
+.projects {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 4rem) / 2);
+  background-color: #280051;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Style the project icon */
+.projectIcon img {
+  width: 100%;
+  height: auto
+}
+
+/* Style the project text */
+.projectText {
+  flex: 1;
+}
+
+.projectText h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projectText p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1280px) {
+  .projects {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+/* Contact */
+.contactSection {
+  background-color: #2c213b;
+  color: #fff;
+  padding: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #56516f;
+  color: #fff;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  color: #2c213b;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    padding: 0 10px;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  input,
+  textarea,
+  select {
+    margin-bottom: 10px;
+  }
+}
+
+/* Modal */
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin: 5px 0;
+}
+
+.modal-content button {
+  margin-top: 10px;
+}
 
 /* Footer */
 .footer-content {

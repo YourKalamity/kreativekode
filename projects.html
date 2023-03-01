@@ -1,19 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Kreative Kode c:</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
 	<nav class="navbar" id="pageNavbar">
 		<a href="index.html">Home</a>
-		<a class="active" href="projects.html">Projects</a>
+		<a class="active" href="projects.html">Projects and Skills</a>
 		<a href="contact.html">Contact</a>
 		<a class="icon" onclick="navbarResponsiveHandler()">&#9776;</a>
 	</nav>
+
+	<header>
+		<div class="subHeaderWal"></div>
+		<div class="subtitleGlassPane">
+			<h1>Projects and Skills</h1>
+		</div>
+	</header>
+
+	<!--Skills-->
+    <main id="skills">
+        <section class="bodySection skill" id="languages">
+            <h1>Programming Languages</h1>
+            <div class="languages">
+                <div class="language">
+                    <div class="languageIcon">
+                        <img src="img/imgLanguageIcons/rust.png" alt="Rust Logo">
+                    </div>
+                    <div class="languageText">
+                        <h2>Rust</h2>
+                        <p>The best language to grace this blue planet. Other languages should look to this one for inspiration. Will take 3-5 working days to compile a small program though. Slow and steady wins the race!<br><em>10/10</em></p>
+                    </div>
+                </div>
+                <div class="language">
+                    <div class="languageIcon">
+                        <img src="img/imgLanguageIcons/python.png" alt="Python Logo">
+                    </div>
+                    <div class="languageText">
+                        <h2>Python</h2>
+                        <p>I am not rating these snakes in case they kill me<br><em>?/10</em></p>
+                    </div>
+                </div>
+                <div class="language">
+                    <div class="languageIcon">
+                        <img src="img/imgLanguageIcons/java.png" alt="Java Logo">
+                    </div>
+                    <div class="languageText">
+                        <h2>Java</h2>
+                        <p>High level, object oriented, and declaring a function requires 10 keyworkds. Have fun writing out public static void int array main() {} a bunch<br><em>/10</em></p>
+                    </div>
+                </div>
+                <div class="language">
+                    <div class="languageIcon">
+                        <img src="img/imgLanguageIcons/cpp.png" alt="C++ Logo">
+                    </div>
+                    <div class="languageText">
+                        <h2>C++</h2>
+                        <p>C++ is the bane of my existence, but it does the job<br><em>7/10</em></p>
+                    </div>
+                </div>
+                <div class="language">
+                    <div class="languageIcon">
+                        <img src="img/imgLanguageIcons/processing.png" alt="Processing Logo">
+                    </div>
+                    <div class="languageText">
+                        <h2>Processing</h2>
+                        <p>I LOVE BUILD TRUCKS IN PROCESSING<br><em>200/10</em></p>
+                    </div>
+                </div>
+                <div class="language">
+                    <div class="languageIcon">
+                        <img src="img/imgLanguageIcons/javascript.png" alt="JavaScript Logo">
+                    </div>
+                    <div class="languageText">
+                        <h2>JavaScript</h2>
+                        <p>JavaScript adamantly believes 1+1=11 and will gaslight you until you believe it as well<br><em>1+1/100</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Projects-->
+        <section class="bodySection skill" id="projects">
+            <h1>Projects</h1>
+            <div class="projects">
+                <div class="project">
+                    <div class="projectIcon">
+                        <img src="img/imgProjects/tokumei.png" alt="Screenshot of TOKUMEI">
+                    </div>
+                    <div class="projectText">
+                        <h2>TOKUMEI</h2>
+                        <p>A secure open-source peer to peer chat app built with pure HTML, CSS and JS for the ultimate anonymous chat experience</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="projectIcon">
+                        <img src="img/imgProjects/lazydsifiledownloader.png" alt="Screenshot of Lazy DSi File Downloader">
+                    </div>
+                    <div class="projectText">
+                        <h2>Lazy DSi File Downloader</h2>
+                        <p>A bespoke piece of software written to make the process of jailbreaking a Nintendo DSi system automated and simple.<br>Cross platform.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="projectIcon">
+                        <img src="img/imgProjects/truck.gif" alt="Screenshot of Truck">
+                    </div>
+                    <div class="projectText">
+                        <h2>Truck Modelling</h2>
+                        <p>Quick and detailed truck models using the Processing suite of tools. Realistic truck motion simulation included.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="projectIcon">
+                        <img src="img/imgProjects/kksite.png" alt="Screenshot of Founders Site">
+                    </div>
+                    <div class="projectText">
+                        <h2>Kalam's Kool Site</h2>
+                        <p>Portfolio of our founder. Designed to be aesthetic and responsive to suit all screen types. Doubles as a mobile app as well.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+	<footer>
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h1 class="logo-text"><span>Kreative Kode</span></h1>
+            <p>
+              Fictional software development company created for Portfolio 1 task.
+              All people and images used are fictional.
+            </p>
+            <div class="contact">
+              <span><i class="fas fa-envelope"></i>220064521@aston.ac.uk</span>
+            </div>
+            <div class="socials">
+              <a href="https://github.com/kreativekode" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/kreativekode" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/aiuwshgdiuahfiasuhdkjgbq" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+      
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <br>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="projects.html">Projects and Skills</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+      
+        </div>
+      
+        <div class="footer-bottom">
+          &copy; 2023 Mohammed Kalam, 220064521@aston.ac.uk, 220064521
+        </div>
+      </footer>
     <script src="js/main.js"></script>
 
 </body>
