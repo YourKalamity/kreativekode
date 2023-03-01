@@ -7,6 +7,8 @@ function contactForm() {
     if (dateInput.value !== "") {
       const selectedDate = new Date(dateInput.value);
        today = new Date();
+       
+       today.setDate(today.getDate() + 1);
        today.setHours(0, 0, 0, 0)
       if (selectedDate < today) {
         dateInput.setCustomValidity("Please select a date that's at least one day in the future.");
